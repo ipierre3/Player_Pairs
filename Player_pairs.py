@@ -1,4 +1,3 @@
-from cProfile import run
 import random
 
 # Main Stories
