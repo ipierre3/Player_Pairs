@@ -46,13 +46,69 @@ def run_player_pairs():
 
     random.shuffle(deck)
 
-def player_1():
+    player_1(deck)
+    player_2(deck)
+    player_3(deck)
+    player_4(deck)
+
+def player_1(deck):
+    player_hand = 'Hand:' + ''
     print('Player 1')
-    print('Hand: ')
+
     for draw in range(5):
-        print(deck[draw])
+        player_hand += ' ' + str(deck[draw]) + ','
+
+    print(player_hand)
+
+def player_2(deck):
+    random.shuffle(deck)
+    player_hand = 'Hand:' + ''
+    print('Player 2')
+
+    for draw in range(5):
+        player_hand += ' ' + str(deck[draw]) + ','
+
+    print(player_hand)
+
+
+def player_3(deck):
+    random.shuffle(deck)
+    player_hand = 'Hand:' + ''
+    print('Player 3')
+
+    for draw in range(5):
+        player_hand += ' ' + str(deck[draw]) + ','
+
+    print(player_hand)
+
+
+def player_4(deck):
+    random.shuffle(deck)
+    player_hand = 'Hand:' + ''
+    print('Player 4')
+
+    for draw in range(5):
+        player_hand += ' ' + str(deck[draw]) + ','
+
+    print(player_hand)
 
 run_player_pairs()
+
+
+# Checking for pairs 
+
+# def check_for_pairs():
+#     values = sorted(card[0] for card in player_hand)
+#         if values.count(values[2]) == 2:
+#         two_of_a_kind += 1
+
+
+
+
+
+
+
+
 
 #     print('Player 2')
 #     print('Hand: ' + str(player_hand))
