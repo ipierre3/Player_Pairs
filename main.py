@@ -1,3 +1,6 @@
+from cProfile import run
+import random
+
 # Main Stories
  
 # (5 points): As a developer, I want to make at least five commits on GitHub with descriptive  messages.
@@ -25,4 +28,57 @@
 # (5 points): As a pair player, I want to determine the number of pairs within each player’s hand and display the player number, 
 # their hand, and the number of pairs to the terminal. 
 
-# (5 points): As a pair player, I want to determine the game’s winner or tied players and display them to the terminal.  
+# (5 points): As a pair player, I want to determine the game’s winner or tied players and display them to the terminal.
+
+
+def greet():
+    print('Welcome to Player Pairs!')
+    print('In this game each player will recieve 5 cards.')
+    print('Once each hand has been dealt, we will compare to see who has the most pairs!')
+
+greet()
+
+def run_player_pairs():
+    deck = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King',
+    'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King',
+    'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'
+    'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
+
+    random.shuffle(deck)
+
+def player_1():
+    print('Player 1')
+    print('Hand: ')
+    for draw in range(5):
+        print(deck[draw])
+
+run_player_pairs()
+
+#     print('Player 2')
+#     print('Hand: ' + str(player_hand))
+
+
+# def player_3(hand3):
+#     hand3 == str(player_hand)
+
+#     print('Player 3')
+#     print('Hand: ' + str(player_hand))
+
+# def player_4(hand4):
+#     hand4 == str(player_hand)
+
+#     print('Player 4')
+#     print('Hand: ' + str(player_hand))
+
+# run_player_pairs()
+
+
+# def player_1_pairs(check_for_pairs):
+#     check_for_pairs = 0
+#     in 
+
+    
+    
+
+
+# def who_won():
