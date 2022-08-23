@@ -102,39 +102,4 @@ run_player_pairs()
 #         if values.count(values[2]) == 2:
 #         two_of_a_kind += 1
 
-
-
-
-
-
-
-
-
-#     print('Player 2')
-#     print('Hand: ' + str(player_hand))
-
-
-# def player_3(hand3):
-#     hand3 == str(player_hand)
-
-#     print('Player 3')
-#     print('Hand: ' + str(player_hand))
-
-# def player_4(hand4):
-#     hand4 == str(player_hand)
-
-#     print('Player 4')
-#     print('Hand: ' + str(player_hand))
-
-# run_player_pairs()
-
-
-# def player_1_pairs(check_for_pairs):
-#     check_for_pairs = 0
-#     in 
-
-    
-    
-
-
 # def who_won():
