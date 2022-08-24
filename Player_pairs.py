@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 
 """
 Main Stories
@@ -35,7 +36,7 @@ their hand, and the number of pairs to the terminal.
 
 def greet():
     print('Welcome to Player Pairs!')
-    print('In this game each player will recieve 5 cards.')
+    print('In this game each player will receive 5 cards.')
     print('Once each hand has been dealt, we will compare to see who has the most pairs!')
 
 greet()
@@ -43,14 +44,14 @@ greet()
 def run_player_pairs():
     deck = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King',
     'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King',
-    'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'
+    'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 
     'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 
-# Shuffle the deck
+# Initial shuffling of the deck
 
     random.shuffle(deck)
 
-# Functions elements to ensure variable 'deck' passes through follow-up functions
+# Key function elements to ensure variable 'deck' passes through each 'player' follow-up function
 
     player_1(deck)
     player_2(deck)
@@ -60,63 +61,74 @@ def run_player_pairs():
 # Function for Player 1
 
 def player_1(deck):
-    player_hand = 'Hand:' + ''
+    player_hand = []
     print('Player 1')
 
     for draw in range(5):
-        player_hand += ' ' + str(deck[draw]) + ','
+        player_hand.append(deck[draw])
 
-    print(player_hand)
+    print('Hand: ' + str(player_hand))
+
+# Key function element that allows 'amount of pairs' function to pass through each player function
 
     amount_of_pairs(player_hand)
 
 def player_2(deck):
     random.shuffle(deck)
-    player_hand = 'Hand:' + ''
+    player_hand = []
     print('Player 2')
 
     for draw in range(5):
-        player_hand += ' ' + str(deck[draw]) + ','
+        player_hand.append(deck[draw])
 
-    print(player_hand)
+    print('Hand: ' + str(player_hand))
 
     amount_of_pairs(player_hand)
 
 
 def player_3(deck):
     random.shuffle(deck)
-    player_hand = 'Hand:' + ''
+    player_hand = []
     print('Player 3')
 
     for draw in range(5):
-        player_hand += ' ' + str(deck[draw]) + ','
+        player_hand.append(deck[draw])
 
-    print(player_hand)
+    print('Hand: ' + str(player_hand))
 
     amount_of_pairs(player_hand)
 
 
 def player_4(deck):
     random.shuffle(deck)
-    player_hand = 'Hand:' + ''
+    player_hand = []
     print('Player 4')
 
     for draw in range(5):
-        player_hand += ' ' + str(deck[draw]) + ','
+        player_hand.append(deck[draw])
 
-    print(player_hand)
+    print('Hand: ' + str(player_hand))
 
     amount_of_pairs(player_hand)
 
 # Checking for pairs 
 
 def amount_of_pairs(player_hand):
-    for card in player_hand:
-        if player_hand.count(card) == 2:
-            print('Number of Pairs: ' + str(player_hand.count(card)))
-        elif player_hand.count(card) == 0:
-            print('Number of Pairs: 0')
+    while True:
+        cards = player_hand
 
-run_player_pairs()
+        counted_cards = Counter(cards)
+        find_pairs, count = zip(*counted_cards.most_common(2))
+
+        located_pairs = {
+            (1, 1): "Number of Pairs: 0",
+            (2, 1): "Number of Pairs: 1",
+            (4, 1): "Number of Pairs: 2",
+        }
+        msg = located_pairs[count]
+        print(msg)
+        break
 
 # def who_won():
+
+run_player_pairs()
