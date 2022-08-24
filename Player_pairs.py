@@ -33,7 +33,6 @@ their hand, and the number of pairs to the terminal.
 
 """
 
-
 def greet():
     print('Welcome to Player Pairs!')
     print('In this game each player will receive 5 cards.')
@@ -129,6 +128,12 @@ def amount_of_pairs(player_hand):
         print(msg)
         break
 
-# def who_won():
-
 run_player_pairs()
+
+
+# ############# INCOMPLETE ##########
+# def determine_a_winner(located_pairs):
+    
+#     player_hand += located_pairs[count]
+#     for winner in player_hand:
+#         if player_hand(located_pairs[count]))
