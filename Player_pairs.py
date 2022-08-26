@@ -36,7 +36,7 @@ their hand, and the number of pairs to the terminal.
 def greet():
     print('Welcome to Player Pairs!')
     print('In this game each player will receive 5 cards.')
-    print('Once each hand has been dealt, we will compare to see who has the most pairs!')
+    print(f'Once each hand has been dealt, we will compare to see who has the most pairs!\n')
 
 greet()
 
@@ -46,7 +46,7 @@ def run_player_pairs():
     'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 
     'Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 
-# Initial shuffling of the deck
+# Initial shuffling of deck
 
     random.shuffle(deck)
 
@@ -72,6 +72,8 @@ def player_1(deck):
 
     amount_of_pairs(player_hand)
 
+# Function of Player 2
+
 def player_2(deck):
     random.shuffle(deck)
     player_hand = []
@@ -82,8 +84,11 @@ def player_2(deck):
 
     print('Hand: ' + str(player_hand))
 
+## Key function element for player 2
+
     amount_of_pairs(player_hand)
 
+# Function of Player 3
 
 def player_3(deck):
     random.shuffle(deck)
@@ -95,8 +100,11 @@ def player_3(deck):
 
     print('Hand: ' + str(player_hand))
 
+## Key function element for player 3
+
     amount_of_pairs(player_hand)
 
+# Function of Player 4
 
 def player_4(deck):
     random.shuffle(deck)
@@ -107,6 +115,8 @@ def player_4(deck):
         player_hand.append(deck[draw])
 
     print('Hand: ' + str(player_hand))
+
+## Key function element for player 3
 
     amount_of_pairs(player_hand)
 
@@ -122,10 +132,12 @@ def amount_of_pairs(player_hand):
         located_pairs = {
             (1, 1): "Number of Pairs: 0",
             (2, 1): "Number of Pairs: 1",
+            (2, 2): '',
+            (3, 1):'',
             (4, 1): "Number of Pairs: 2",
         }
         msg = located_pairs[count]
-        print(msg)
+        print(f"{msg}\n")
         break
 
 run_player_pairs()
